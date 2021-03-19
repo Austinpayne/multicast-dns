@@ -176,8 +176,7 @@ function allInterfaces (socketType) {
       } else if (iface.family === 'IPv6' && socketType === 'udp6') {
         // In IPv6, we can specify the interface using the format below
         // (https://nodejs.org/api/dgram.html#dgram_socket_setmulticastinterface_multicastinterface)
-        res.push(`::%${iface.scopeid}`)
-
+        res.push(`::%${names[i]}`)
         break
       }
     }
